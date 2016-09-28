@@ -31,7 +31,7 @@ docker create \
   -e PGID=<gid> -e PUID=<uid>  \
   -e TZ=<timezone> \
   -p 5299:5299 \
-  linuxserver/lazylibrarian
+  lsioarmhf/lazylibrarian
 ```
 
 **Parameters**
@@ -58,6 +58,8 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ```
 
 ## Setting up the application
+`IMPORTANT... THIS IS THE ARMHF VERSION`
+
 Access the webui at `<your-ip>:5299/home`, for more information check out [LazyLibrarian][lazyurl]..
 
 ## Info
