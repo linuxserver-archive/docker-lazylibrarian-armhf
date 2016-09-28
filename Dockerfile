@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python
+FROM lsiobase/alpine.python.armhf
 MAINTAINER chbmb
 
 # add local files
