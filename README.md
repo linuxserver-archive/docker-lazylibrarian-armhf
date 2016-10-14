@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/lazylibrarian
-[![](https://images.microbadger.com/badges/image/lsioarmhf/lazylibrarian.svg)](https://microbadger.com/images/lsioarmhf/lazylibrarian "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/lazylibrarian.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/lazylibrarian.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-lazylibrarian)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-lazylibrarian/)
+[![](https://images.microbadger.com/badges/version/lsioarmhf/lazylibrarian.svg)](https://microbadger.com/images/lsioarmhf/lazylibrarian "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/lazylibrarian.svg)](https://microbadger.com/images/lsioarmhf/lazylibrarian "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/lazylibrarian.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/lazylibrarian.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-lazylibrarian)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-lazylibrarian/)
 [hub]: https://hub.docker.com/r/lsioarmhf/lazylibrarian/
 
 
@@ -66,7 +66,16 @@ Access the webui at `<your-ip>:5299/home`, for more information check out [LazyL
 
 * To monitor the logs of the container in realtime `docker logs -f lazylibrarian`.
 
+* container version number 
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lazylibrarian`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmhf/lazylibrarian`
+
 ## Versions
 
++ **14-10-16:** Add version layer information.
 + **03.10.16:** Fix non-persistent settings and make log folder.
 + **28.09.16:** Inital Release.
