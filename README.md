@@ -2,6 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
+[appurl]: https://github.com/DobyTang/LazyLibrarian
+[hub]: https://hub.docker.com/r/lsioarmhf/lazylibrarian/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,13 +14,11 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # lsioarmhf/lazylibrarian
 [![](https://images.microbadger.com/badges/version/lsioarmhf/lazylibrarian.svg)](https://microbadger.com/images/lsioarmhf/lazylibrarian "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/lazylibrarian.svg)](https://microbadger.com/images/lsioarmhf/lazylibrarian "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/lazylibrarian.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/lazylibrarian.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-lazylibrarian)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-lazylibrarian/)
-[hub]: https://hub.docker.com/r/lsioarmhf/lazylibrarian/
 
 
-[LazyLibrarian][lazyurl] is a program to follow authors and grab metadata for all your digital reading needs. It uses a combination of Goodreads Librarything and optionally GoogleBooks as sources for author info and book info.  This container is based on the DobyTang fork.
+[LazyLibrarian][appurl] is a program to follow authors and grab metadata for all your digital reading needs. It uses a combination of Goodreads Librarything and optionally GoogleBooks as sources for author info and book info.  This container is based on the DobyTang fork.
 
-[![lazylibrarian](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/lazylibrarian-icon.png)][lazyurl]
-[lazyurl]: https://github.com/DobyTang/LazyLibrarian
+[![lazylibrarian](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/lazylibrarian-icon.png)][appurl]
 
 ## Usage
 
@@ -66,7 +66,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application
 `IMPORTANT... THIS IS THE ARMHF VERSION`
 
-Access the webui at `<your-ip>:5299/home`, for more information check out [LazyLibrarian][lazyurl]..
+Access the webui at `<your-ip>:5299/home`, for more information check out [LazyLibrarian][appurl]..
 
 ## Info
 
