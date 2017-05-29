@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python.armhf:3.5
+FROM lsiobase/alpine.python.armhf:3.6
 MAINTAINER chbmb
 
 # set version label
@@ -37,9 +37,9 @@ RUN \
  rm -rf \
 	/tmp/*
 
-# add local files
+# add local files
 COPY root/ /
 
-# ports and volumes
+# ports and volumes
 EXPOSE 5299
 VOLUME /config /books /downloads
