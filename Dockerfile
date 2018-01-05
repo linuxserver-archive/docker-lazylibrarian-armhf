@@ -1,23 +1,21 @@
-FROM lsiobase/alpine.python.armhf:3.6
-MAINTAINER chbmb
+FROM lsiobase/alpine.python.armhf:3.7
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="chbmb"
 
-# install build packages
 RUN \
+ echo "**** install build packages ****" && \
  apk add --no-cache --virtual=build-dependencies \
 	g++ \
 	gcc \
 	make && \
-
-# install runtime packages
+ echo "**** install runtime packages ****" && \
  apk add --no-cache \
 	ghostscript && \
-
-# build unrarlib
+ echo "***** build unrarlib ****" && \
  rar_ver=$(apk info unrar | grep unrar- | cut -d "-" -f2 | head -1) && \
  mkdir -p \
 	/tmp/unrar && \
@@ -30,11 +28,9 @@ RUN \
  cd /tmp/unrar && \
  make lib && \
  make install-lib && \
-
-# install app
+ echo "**** install app ****" && \
  git clone --depth 1 https://github.com/dobytang/lazylibrarian.git /app/lazylibrarian && \
-
-# cleanup
+ echo "**** cleanup ****" && \
  apk del --purge \
 	build-dependencies && \
  rm -rf \
