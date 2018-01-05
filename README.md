@@ -81,6 +81,7 @@ Access the webui at `<your-ip>:5299/home`, for more information check out [LazyL
 
 ## Versions
 
++ **05.01.18:** Rebase to alpine 3.7.
 + **21.07.17:** Internal git pull instead of at runtime.
 + **29.05.17:** Rebase to alpine 3.6.
 + **07.02.17:** Rebase to alpine 3.5.
